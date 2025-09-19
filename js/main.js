@@ -1,4 +1,4 @@
-import { generatePhotos } from './data';
+import { renderPictures } from './pictures';
 
-// eslint-disable-next-line no-unused-vars
-const photos = generatePhotos();
+renderPictures();
+

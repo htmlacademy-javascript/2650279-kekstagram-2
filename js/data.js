@@ -1,3 +1,5 @@
+import { getRandomArrayElement, getRandomInteger } from './utils';
+
 const MAX_PHOTOS_COUNT = 10;
 
 const NAMES = ['Артём', 'Степан', 'Аким', 'Тимур', 'Олег', 'Мария', 'Ксения', 'Павел', 'Ирина', 'Дмитрий'];
@@ -20,18 +22,6 @@ const DESCRIPTIONS = [
   'Свежесть утра.', 'Без границ.', 'Солнечные выходные.', 'Шум прибоя.', 'Новая история.',
   'Мелодия лета.', 'Воспоминания детства.', 'Спокойствие моря.', 'По дорогам мира.', 'Тишина рассвета.'
 ];
-
-const getRandomInteger = (a, b) => {
-  const lower = Math.ceil(Math.min(a, b));
-  const upper = Math.floor(Math.max(a, b));
-  const result = Math.random() * (upper - lower + 1) + lower;
-
-  return Math.floor(result);
-};
-
-function getRandomArrayElement(elements) {
-  return elements[getRandomInteger(0, elements.length - 1)];
-}
 
 function createComment(id) {
   return {
@@ -65,7 +55,4 @@ function generatePhotos() {
   return Array.from({ length: MAX_PHOTOS_COUNT }, (_, id) => createPhoto(id));
 }
 
-const photos = generatePhotos();
-
-// eslint-disable-next-line no-console
-console.log(photos);
+export {generatePhotos};

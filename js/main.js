@@ -1,4 +1,1 @@
-import { renderPictures } from './pictures';
-
-renderPictures();
-
+import './gallery.js';

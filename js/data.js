@@ -55,4 +55,6 @@ function generatePhotos() {
   return Array.from({ length: MAX_PHOTOS_COUNT }, (_, id) => createPhoto(id));
 }
 
+// empty commit
+
 export {generatePhotos};

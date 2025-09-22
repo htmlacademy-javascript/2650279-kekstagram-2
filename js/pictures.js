@@ -1,11 +1,8 @@
-// import { generatePhotos } from './data';
 
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
 const picutresContainer = document.querySelector('.pictures');
 
 const picturesListFragment = document.createDocumentFragment();
-
-// const photos = generatePhotos();
 
 const createPicture = ({id, likes, comments, url, description}) => {
   const pictureElement = pictureTemplate.cloneNode(true);
@@ -21,12 +18,6 @@ const createPicture = ({id, likes, comments, url, description}) => {
 
   return pictureElement;
 };
-
-// photos.forEach((photo) => {
-//   const picture = createPicture(photo);
-
-//   picturesListFragment.append(picture);
-// });
 
 const renderPictures = (photos) => {
   photos.forEach((photo) => {
